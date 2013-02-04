@@ -11,7 +11,7 @@
 //
 // ==/UserScript==
 
-// TODO: add chrome support
+// TODO: add chrome support, it's hard
 
 $(document).ready(function(){
 	//Login Page
