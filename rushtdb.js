@@ -1,23 +1,21 @@
 // ==UserScript==
 //
-// @name			RushTDB Script
-// @namespace		http://RushTDBScript/
-// @description		秘密武器，你懂得
+// @name			My First Script
+// @namespace		http://MyFirstScript/
+// @description		我的第一个测试脚本
 // @include			https://dynamic.12306.cn/otsweb/*
 // @include			https://www.12306.cn/otsweb/*
-// @include			http://dynamic.12306.cn/otsweb/*
-// @include			http://www.12306.cn/otsweb/*
 // @require			http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
 //
 // ==/UserScript==
-// TODO: 
+
 
 
 $(document).ready(function(){
 	//Login Page
-	if ($("#UserName").length > 1) {		
+	if ($("#UserName").length > 10) {		
 		$("#randCode").focus();
-/* 		$("#randCode").keyup(function (e) {
+		$("#randCode").keyup(function (e) {
 			e = e || event;
 			if (e.charCode == 13 || $("#randCode").val().length == 4) getLoginRandCode();
 		});
@@ -36,7 +34,7 @@ $(document).ready(function(){
 					alert(msg);
 				}
 			});
- */		}
+		}
 		
 		function relogin() {
 			var data = {};
@@ -279,7 +277,7 @@ $(document).ready(function(){
 			type: "POST",
 			url: "/otsweb/order/confirmPassengerAction.do?method=getpassengerJson",
 			data: "",
-			timeout: 60000,
+			timeout: 10000,
 			dataType: "text",
 			success: function getresult(jsondata) {
 				var passengers = eval ("(" + jsondata + ")");
