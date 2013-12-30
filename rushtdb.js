@@ -12,5 +12,5 @@
 
 
 $(document).ready(function(){
-        unsafeWindow.autoSearchTime = 1000;
+    unsafeWindow.autoSearchTime = 1000;
 });
